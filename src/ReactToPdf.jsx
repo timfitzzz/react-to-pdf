@@ -6,7 +6,7 @@ import html2canvas from 'html2canvas';
 class ReactToPdf extends PureComponent {
   constructor(props) {
     super(props);
-    this.toPdf = this.toPdf.bind(this);
+    this.toPdf = window ? this.toPdf.bind(this) : () => {};
     this.targetRef = React.createRef();
   }
 
